@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var spotify_service_1 = require('../../services/spotify.service');
+var spotify_service_1 = require('../services/spotify.service');
 var SearchComponent = (function () {
     function SearchComponent(spotifyService) {
         this.spotifyService = spotifyService;
@@ -19,7 +19,6 @@ var SearchComponent = (function () {
         console.log(this.searchStr);
         this.spotifyService.searchMusic(this.searchStr).subscribe(function (res) {
             _this.searchRes = res.artists.items;
-            console.log(_this.searchRes);
         });
     };
     SearchComponent = __decorate([
