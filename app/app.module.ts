@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import { HttpModule } from '@angular/http';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component'
@@ -11,7 +11,7 @@ import { routing } from './app.routes';
 
 
 @NgModule({
-  imports:      [ BrowserModule, routing ],
+  imports:      [ BrowserModule, routing, FormsModule, HttpModule ],
   declarations: [ AppComponent, NavbarComponent, AboutComponent, SearchComponent ],
   bootstrap:    [ AppComponent ]
 })
