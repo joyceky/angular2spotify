@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .git
 .gitignore
 .travis.yml
@@ -12,18 +11,3 @@ LICENSE
 non-essential-files.txt
 protractor.config.js
 README.md
-=======
-.git
-.gitignore
-.travis.yml
-*.spec*.ts
-CHANGELOG.md
-e2e
-favicon.ico
-karma.conf.js
-karma-test-shim.js
-LICENSE
-non-essential-files.txt
-protractor.config.js
-README.md
->>>>>>> origin/tps-part1
