@@ -5,10 +5,11 @@ import { NavbarComponent }  from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { SearchComponent } from './components/search/search.component';
 import { routing } from './app.routes';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
-  imports:      [ BrowserModule, routing ],
+  imports:      [ BrowserModule, routing, FormsModule, HttpModule ],
   declarations: [ AppComponent, NavbarComponent, AboutComponent, SearchComponent],
   bootstrap:    [ AppComponent ]
 })

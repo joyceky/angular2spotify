@@ -1,3 +1,11 @@
-searchComponent
+<h1>Give me Musik!</h1>
+<p class="lead">Use app to browse new releases</p>
+<form action="">
+    <div class="form-group">
+        <input type="text" class="form-control" name="searchStr" 
+        [(ngModel)]="searchStr" 
+        (keyup)="searchMusic()" />
+    </div>
+</form>
 
 
