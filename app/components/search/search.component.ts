@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { SpotifyService } from '../../services/spotify.service';
+import { Artist } from '../../models/artist';
 
 @Component({
     moduleId: module.id,
@@ -12,17 +13,19 @@ import { SpotifyService } from '../../services/spotify.service';
 export class SearchComponent {
 
     searchStr: string;
+    searchRes: Artist[];
 
     constructor(private spotifyService: SpotifyService) {
 
     }
 
-    searchMusic() {
+    searchMusic() {        
         console.log("Running searchMusic..." + this.searchStr);
 
         // This returns an observable so we have to subscribe to it
-        this.spotifyService.searchMusic().subscribe(res => {
-                console.log(res.artists.items)
+        this.spotifyService.searchMusic(this.searchStr)
+            .subscribe(res => {
+                this.searchRes = res.artists.items;                
             });
     }
 }
