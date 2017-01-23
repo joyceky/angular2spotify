@@ -6,4 +6,3 @@ export class Artist{
     genres: any;
     album: Album[];
 }
-
