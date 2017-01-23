@@ -7,6 +7,7 @@ export class SpotifyService {
     private searchUrl: string;
     private artistUrl: string;
     private albumsUrl: string;
+    private albumUrl: string;
 
     constructor(private http: Http){
         console.log('SpotifyService Initialized...');
@@ -25,10 +26,17 @@ export class SpotifyService {
             .map(res => res.json());
     }
 
-       getAlbums(artistId:string) {
-        console.log(artistId);
-        this.albumsUrl = "https://api.spotify.com/v1/artists/" +artistId+ "/albums";        
-        return this.http.get(this.albumsUrl)
-            .map(res => res.json());
+    getAlbums(artistId:string) {
+    console.log(artistId);
+    this.albumsUrl = "https://api.spotify.com/v1/artists/" +artistId+ "/albums";        
+    return this.http.get(this.albumsUrl)
+        .map(res => res.json());
     }
+
+    getAlbum(id:string) {
+    console.log(id);
+    this.albumUrl = "https://api.spotify.com/v1/albums" +id;        
+    return this.http.get(this.albumUrl)
+        .map(res => res.json());
+    }  
 }
