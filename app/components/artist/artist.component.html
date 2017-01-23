@@ -20,14 +20,10 @@
                         <div *ngIf="album.images.length > 0">
                             <img class="album-thumb img-thumbnail" src="{{album.images[0].url}}" />
                             <h4>{{album.name}}</h4>
-                            <a class="btn btn-default btn-block">Album Details</a>
+                            <a class="btn btn-default btn-block" routerLink="/album/{{album.id}}">Album Details</a>
                         </div>
                     </div>
-                </div>
-
-                <div *ngIf="i % 4 == 0">
-                    <div class="clearfix"></div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
