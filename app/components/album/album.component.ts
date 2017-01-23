@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SpotifyService } from '../services/spotify.service';
+import { SpotifyService } from '../../services/spotify.service';
 import { Artist } from '../../models/Artist';
 import { Album } from '../../models/Album';
 
@@ -8,7 +8,7 @@ import { Album } from '../../models/Album';
 @Component({
     moduleId: module.id,
     selector: 'album',
-    styleUrls: ['album.component.scss'],
+    styleUrls: ['../artist/artist.component.scss'],
     templateUrl: 'album.component.html'
 })
 
@@ -29,7 +29,7 @@ export class AlbumComponent implements OnInit {
 
                 this.spotifyService.getAlbum(id)
                     .subscribe(album => {
-                        this.album = album.items;
+                        this.album = album;
                     })
             })
     }
