@@ -1,2 +1,1 @@
-# angular2spotify
-spotify &amp; angular 2
+An application build using Angular 2 with Typescript and the Spotify Web Api
